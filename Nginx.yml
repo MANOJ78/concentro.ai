@@ -2,8 +2,8 @@
 - hosts: all
   tasks:
     - name: ensure nginx is at the latest version
-      yum: name=nginx state=latest
-	  
+      apt-get: name=nginx state=latest
+      
     - name: start nginx
       service:
           name: nginx
