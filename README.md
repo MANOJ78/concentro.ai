@@ -3,8 +3,11 @@ Assigned Tasks as per my knowledge
 
 
 Cloud Formation Automation
+
  Create a ECR repository, for pushing the docker image.
+
  Create EC2 instance for Jenkins job execution.
+
  Create EC2 instance for Deployment of docker image. This instance should have docker daemon running. And open the port to access the website publicly.
 
 Jenkins Job to Build & Deploy Pipeline
