@@ -1,0 +1,61 @@
+==============
+Installations:
+==============
+Launch the Ubuntu Machine and Become the Root User
+Then follow the below steps: 
+ 
+ Step 1: #Repository Update
+		:	apt-get update -y
+		
+ Step 2: #Java Installation
+		:	apt-get list java*
+		:	apt-get install java-1.8.0-openjdk-devel.x86_64 -y
+		
+ Step 3: #Verify Installation
+		:	java --version
+		:	javac --version
+		
+ Step 4: #GIT Installation			
+		:	apt-get install git -y
+		:	apt-get install wget -y
+		:	cd /opt
+ Step 5: #To Install Node.js
+    : sudo apt-get install nodejs
+
+Step 6: #To Install npm package
+    : sudo apt-get install npm
+
+Step 7: #Jenkins Installation
+	  : sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+		: sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+		: apt-get install jenkins
+
+Step 8: #Jenkins Service Start
+		: service jenkins start
+		: service jenkins status
+		: ip address:8080
+		: cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Step 9: #Tomcat Installation
+		:	wget https://www-us.apache.org/dist/tomcat/tomcat-7/v7.0.91/bin/apache-tomcat-7.0.91.tar.gz
+		:	tar -xvf apache-tomcat-7.0.91.tar.gz
+		:	rm -rf apache-tomcat-7.0.91.tar.gz
+		:	mv apache-tomcat-7.0.91/ tomcat7
+ 
+Step 10: #Tomcat Port access modification
+		:	chmod 777 tomcat7
+		: 	cd conf
+		: 	vi server.xml
+				Edit the connector Port
+		:	vi tomcat-user.xml
+				Add these lines
+					  <role rolename="manager-gui"/>
+					  <role rolename="manager-script"/>
+					  <user username="tomcat" password="tomcat" roles="manager-gui, manager-script"/>
+ Step 12: #Tomcat Service Start
+		:	cd bin
+		:	.startup.sh
+    
+
+ 
+ 
